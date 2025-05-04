@@ -366,6 +366,10 @@ export class SmallWebRTCTransport extends Transport {
           type: offerSdp.type,
           pc_id: this.pc_id,
           restart_pc: recreatePeerConnection,
+          // START MODIFICATION - Include config and requestData
+          config: this._options.params.config,
+          requestData: this._options.params.requestData,
+          // END MODIFICATION
         }),
         headers: {
           "Content-Type": "application/json",
